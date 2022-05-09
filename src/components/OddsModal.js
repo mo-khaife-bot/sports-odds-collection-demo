@@ -8,6 +8,8 @@ import { icons } from "./Constant";
 
 import { filterTeam, calculateOdds } from "../utils/utils";
 
+import "../style/OddsModal.scss";
+
 const OddsModal = ({ onHide, show, activeGame, onSeeMoreOdds }) => {
   if (!activeGame) {
     return null;

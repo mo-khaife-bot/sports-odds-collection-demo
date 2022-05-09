@@ -47,7 +47,14 @@ function App() {
         } else if (response.status === 429) {
           setRateLimit(true);
         } else {
-          return setOdds({ ...odds, soccer_epl: response.data });
+          console.log(response.status);
+          if (activeSport === "soccer_epl") {
+            setOdds({ ...odds, soccer_epl: response.data });
+          } else if (activeSport === "basketball_nba") {
+            setOdds({ ...odds, basketball_nba: response.data });
+          } else if (activeSport === "americanfootball_nfl") {
+            setOdds({ ...odds, americanfootball_nfl: response.data });
+          }
         }
       } catch (error) {
         setError(true);
@@ -55,7 +62,8 @@ function App() {
       }
     };
     getData(activeSport);
-  }, []);
+  }, [activeSport]);
+  // dependency of activeSport so whenever this changes the api is called again with a new sport being checked
 
   if (!odds) {
     return null;
@@ -76,7 +84,7 @@ function App() {
 
   // console.log("Team 1:: ", detailsTeam1);
 
-  // console.log("odds :::", odds);
+  console.log("odds :::", odds);
 
   return (
     <>
@@ -92,15 +100,23 @@ function App() {
             <ListGroup>
               <h6>
                 Made by{" "}
-                <a href="https://github.com/MuhammadAli-ai">Mo Khaife Ali</a>👨🏾‍💻
+                <a href="https://github.com/MuhammadAli-ai/sports-odds-collection-demo">
+                  Mo Khaife Ali
+                </a>
+                👨🏾‍💻
               </h6>
               {sportsList.map((sport) => {
                 return (
                   <ListGroup.Item
                     key={sport.key}
                     as="button"
-                    onClick={() => setActiveSport(sport.key)}
+                    onClick={() => {
+                      setActiveSport(sport.key);
+                      console.log("activeSport :: ", activeSport);
+                    }}
                     active={activeSport === sport.key}
+                    // does comparison check between the active sport currently within state compared to the sport key
+                    // if they are equal then it will highlight that button
                   >
                     {sport.view}
                   </ListGroup.Item>
@@ -138,7 +154,9 @@ function App() {
                       );
                     })
                   ) : (
-                    <div>No sports yet</div>
+                    <div className="loadText">
+                      Loading...<div className="loader"></div>
+                    </div>
                   )}
                 </Row>
               )}
