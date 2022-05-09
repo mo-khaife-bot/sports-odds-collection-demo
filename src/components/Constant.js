@@ -3,48 +3,8 @@ export const sportsList = [
   { key: "basketball_nba", view: "NBA" },
   { key: "americanfootball_nfl", view: "NFL" },
   { key: "icehockey_nhl", view: "NHL" },
+  { key: "baseball_mlb", view: "MLB" },
 ];
-
-// export const icons = {
-//   watford:
-//     "https://resources.premierleague.com/premierleague/badges/25/t57.png",
-//   arsenal: "https://resources.premierleague.com/premierleague/badges/50/t3.png",
-//   aston_villa:
-//     "https://resources.premierleague.com/premierleague/badges/25/t7.png",
-//   brentford:
-//     "https://resources.premierleague.com/premierleague/badges/25/t94.png",
-//   brighton_and_hove_albion:
-//     "https://resources.premierleague.com/premierleague/badges/25/t36.png",
-//   burnley:
-//     "https://resources.premierleague.com/premierleague/badges/25/t90.png",
-//   chelsea: "https://resources.premierleague.com/premierleague/badges/25/t8.png",
-//   crystal_palace:
-//     "https://resources.premierleague.com/premierleague/badges/25/t31.png",
-//   everton:
-//     "https://resources.premierleague.com/premierleague/badges/25/t11.png",
-//   leeds_united:
-//     "https://resources.premierleague.com/premierleague/badges/25/t2.png",
-//   leicester_city:
-//     "https://resources.premierleague.com/premierleague/badges/25/t13.png",
-//   liverpool:
-//     "https://resources.premierleague.com/premierleague/badges/25/t14.png",
-//   manchester_city:
-//     "https://resources.premierleague.com/premierleague/badges/25/t43.png",
-//   manchester_united:
-//     "https://resources.premierleague.com/premierleague/badges/25/t1.png",
-//   newcastle_united:
-//     "https://resources.premierleague.com/premierleague/badges/25/t4.png",
-//   tottenham_hotspur:
-//     "https://resources.premierleague.com/premierleague/badges/25/t6.png",
-//   norwich_city:
-//     "https://resources.premierleague.com/premierleague/badges/25/t45.png",
-//   wolverhampton_wanderers:
-//     "https://resources.premierleague.com/premierleague/badges/25/t39.png",
-//   west_ham_united:
-//     "https://resources.premierleague.com/premierleague/badges/25/t21.png",
-//   southampton:
-//     "https://resources.premierleague.com/premierleague/badges/25/t20.png",
-// };
 
 export const icons = {
   watford:
@@ -149,7 +109,7 @@ export const icons = {
     "https://static.www.nfl.com/image/private/f_auto/league/v8uqiualryypwqgvwcih",
   washington_football_team:
     "https://static.www.nfl.com/image/private/f_auto/league/ywoi3t4jja8fokqpyegk",
-  // NBA TEAM LOGOS
+  //  !!!!!!!!!!!!!!!!!!!!     NBA TEAM LOGOS !!!!!!!!!!!!!!!
   atlanta_hawks:
     "https://loodibee.com/wp-content/uploads/nba-atlanta-hawks-logo.png",
   boston_celtics:
@@ -169,4 +129,171 @@ export const icons = {
     "https://loodibee.com/wp-content/uploads/phoenix-suns-1992-2000.png",
   dallas_mavericks:
     "https://loodibee.com/wp-content/uploads/nba-dallas-mavericks-logo.png",
+  charlotte_hornets:
+    "https://loodibee.com/wp-content/uploads/nba-charlotte-hornets-logo.png",
+  new_york_knicks:
+    "https://loodibee.com/wp-content/uploads/nba-new-york-knicks-logo.png",
+  philadelphia_76ers:
+    "https://loodibee.com/wp-content/uploads/nba-philadelphia-76ers-logo.png",
+  toronto_raptors:
+    "https://loodibee.com/wp-content/uploads/nba-toronto-raptors-logo.png",
+  los_angeles_clippers:
+    "https://loodibee.com/wp-content/uploads/nba-los-angeles-clippers-logo.png",
+  los_angeles_lakers:
+    "https://loodibee.com/wp-content/uploads/nba-los-angeles-lakers-logo.png",
+  sacramento_kings:
+    "https://loodibee.com/wp-content/uploads/nba-sacramento-kings-logo.png",
+  chicago_bulls:
+    "https://loodibee.com/wp-content/uploads/nba-chicago-bulls-logo.png",
+  cleveland_cavaliers:
+    "https://loodibee.com/wp-content/uploads/nba-cleveland-cavaliers-logo.png",
+  detroit_pistons:
+    "https://loodibee.com/wp-content/uploads/nba-detroit-pistons-logo.png",
+  indiana_pacers:
+    "https://loodibee.com/wp-content/uploads/nba-indiana-pacers-logo.png",
+  houston_rockets:
+    "https://loodibee.com/wp-content/uploads/nba-houston-rockets-logo.png",
+  new_orleans_hornets:
+    "https://loodibee.com/wp-content/uploads/nba-new-orleans-hornets-logo.png",
+  san_antonio_spurs:
+    "https://loodibee.com/wp-content/uploads/nba-san-antonio-spurs-logo.png",
+  orlando_magic:
+    "https://loodibee.com/wp-content/uploads/nba-orlando-magic-logo.png",
+  washington_wizards:
+    "https://loodibee.com/wp-content/uploads/nba-washington-wizards-logo.png",
+  denver_nuggets:
+    "https://loodibee.com/wp-content/uploads/nba-denver-nuggets-logo.png",
+  minnesota_timberwolves:
+    "https://loodibee.com/wp-content/uploads/nba-minnesota-timberwolves-logo.png",
+  oklahoma_city_thunder:
+    "https://loodibee.com/wp-content/uploads/nba-oklahoma-city-thunder-logo.png",
+  portland_trail_blazers:
+    "https://loodibee.com/wp-content/uploads/nba-portland-trail-blazers-logo.png",
+  utah_jazz: "https://loodibee.com/wp-content/uploads/nba-utah-jazz-logo.png",
+  // !!!!!!!!!!!!!!   NHL LOGOS  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  anaheim_ducks:
+    "https://loodibee.com/wp-content/uploads/nhl-anaheim-ducks-logo.png",
+  arizona_coyotes:
+    "https://loodibee.com/wp-content/uploads/nhl-arizona-coyotes-logo.png",
+  boston_bruins:
+    "https://loodibee.com/wp-content/uploads/nhl-boston-bruins-logo.png",
+  buffalo_sabres:
+    "https://loodibee.com/wp-content/uploads/nhl-buffalo-sabres-logo.png",
+  calgary_flames:
+    "https://loodibee.com/wp-content/uploads/nhl-calgary-flames-logo.png",
+  carolina_hurricanes:
+    "https://loodibee.com/wp-content/uploads/nhl-carolina-hurricanes-logo.png",
+  chicago_blackhawks:
+    "https://loodibee.com/wp-content/uploads/nhl-chicago-blackhawks-logo.png",
+  colorado_avalanche:
+    "https://loodibee.com/wp-content/uploads/nhl-colorado-avalanche-logo.png",
+  columbus_blue_ackets:
+    "https://loodibee.com/wp-content/uploads/nhl-columbus-blue-ackets-logo.png",
+  dallas_stars:
+    "https://loodibee.com/wp-content/uploads/nhl-dallas-stars-logo.png",
+  detroit_red_wings:
+    "https://loodibee.com/wp-content/uploads/nhl-detroit-red-wings-logo.png",
+  edmonton_oilers:
+    "https://loodibee.com/wp-content/uploads/nhl-edmonton-oilers-logo.png",
+  florida_panthers:
+    "https://loodibee.com/wp-content/uploads/nhl-florida-panthers-logo.png",
+  los_angeles_kings:
+    "https://loodibee.com/wp-content/uploads/nhl-los-angeles-kings-logo.png",
+  minnesota_wild:
+    "https://loodibee.com/wp-content/uploads/nhl-minnesota-wild-logo.png",
+  montreal_canadiens:
+    "https://loodibee.com/wp-content/uploads/nhl-montreal-canadiens-logo.png",
+  nashville_predators:
+    "https://loodibee.com/wp-content/uploads/nhl-nashville-predators-logo.png",
+  new_jersey_devils:
+    "https://loodibee.com/wp-content/uploads/nhl-new-jersey-devils-logo.png",
+  new_york_islanders:
+    "https://loodibee.com/wp-content/uploads/nhl-new-york-islanders-logo.png",
+  new_york_rangers:
+    "https://loodibee.com/wp-content/uploads/nhl-new-york-rangers-logo.png",
+  ottawa_senators:
+    "https://loodibee.com/wp-content/uploads/nhl-ottawa-senators-logo.png",
+  philadelphia_flyers:
+    "https://loodibee.com/wp-content/uploads/nhl-philadelphia-flyers-logo.png",
+  pittsburgh_penguins:
+    "https://loodibee.com/wp-content/uploads/nhl-pittsburgh-penguins-logo.png",
+  san_jose_sharks:
+    "https://loodibee.com/wp-content/uploads/nhl-san-jose-sharks-logo.png",
+  st_louis_blues:
+    "https://loodibee.com/wp-content/uploads/nhl-st-louis-blues-logo.png",
+  tampa_bay_lightning:
+    "https://loodibee.com/wp-content/uploads/nhl-tampa-bay-lightning-logo.png",
+  toronto_maple_leafs:
+    "https://loodibee.com/wp-content/uploads/nhl-toronto-maple-leafs-logo.png",
+  vancouver_canucks:
+    "https://loodibee.com/wp-content/uploads/nhl-vancouver-canucks-logo.png",
+  vegas_golden_knights:
+    "https://loodibee.com/wp-content/uploads/nhl-vegas-golden-knights-logo.png",
+  washington_capitals:
+    "https://loodibee.com/wp-content/uploads/nhl-washington-capitals-logo.png",
+  winnipeg_jets:
+    "https://loodibee.com/wp-content/uploads/nhl-winnipeg-jets-logo.png",
+  // !!!!!!!!!!!!!! MLB Teams !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  arizona_diamondbacks:
+    "https://loodibee.com/wp-content/uploads/mlb-arizona-diamondbacks-logo.png",
+  atlanta_braves:
+    "https://loodibee.com/wp-content/uploads/mlb-atlanta-braves-logo.png",
+  baltimore_orioles:
+    "https://loodibee.com/wp-content/uploads/mlb-baltimore-orioles-logo-bird.png",
+  boston_red_sox:
+    "https://loodibee.com/wp-content/uploads/mlb-boston-red-sox-logo.png",
+  chicago_cubs:
+    "https://loodibee.com/wp-content/uploads/mlb-chicago-cubs-logo.png",
+  chicago_white_sox:
+    "https://loodibee.com/wp-content/uploads/mlb-chicago-white-sox-logo.png",
+  cincinnati_reds:
+    "https://loodibee.com/wp-content/uploads/mlb-cincinnati-reds-logo.png",
+  cleveland_indians:
+    "https://loodibee.com/wp-content/uploads/mlb-cleveland-indians-logo.png",
+  cleveland_guardians:
+    "https://loodibee.com/wp-content/uploads/mlb-cleveland-guardians-logo.png",
+  colorado_rockies:
+    "https://loodibee.com/wp-content/uploads/mlb-colorado-rockies-logo.png",
+  detroit_tigers:
+    "https://loodibee.com/wp-content/uploads/mlb-detroit-tigers-logo.png",
+  houston_astros:
+    "https://loodibee.com/wp-content/uploads/mlb-houston-astros-logo.png",
+  kansas_city_royals:
+    "https://loodibee.com/wp-content/uploads/mlb-kansas-city-royals-logo.png",
+  los_angeles_angels:
+    "https://loodibee.com/wp-content/uploads/mlb-los-angeles-angels-logo.png",
+  los_angeles_dodgers:
+    "https://loodibee.com/wp-content/uploads/mlb-los-angeles-dodgers-logo.png",
+  miami_marlins:
+    "https://loodibee.com/wp-content/uploads/mlb-miami-marlins-logo.png",
+  milwaukee_brewers:
+    "https://loodibee.com/wp-content/uploads/mlb-milwaukee-brewers-logo.png",
+  minnesota_twins:
+    "https://loodibee.com/wp-content/uploads/mlb-minnesota-twins-logo.png",
+  new_york_mets:
+    "https://loodibee.com/wp-content/uploads/mlb-new-york-mets-logo.png",
+  new_york_yankees:
+    "https://loodibee.com/wp-content/uploads/mlb-new-york-yankees-logo.png",
+  oakland_athletics:
+    "https://loodibee.com/wp-content/uploads/mlb-oakland-athletics-logo.png",
+  philadelphia_phillies:
+    "https://loodibee.com/wp-content/uploads/mlb-philadelphia-phillies-logo.png",
+  pittsburgh_pirates:
+    "https://loodibee.com/wp-content/uploads/mlb-pittsburgh-pirates-logo.png",
+  san_diego_padres:
+    "https://loodibee.com/wp-content/uploads/mlb-san-diego-padres-logo.png",
+  san_francisco_giants:
+    "https://loodibee.com/wp-content/uploads/mlb-san-francisco-giants-logo.png",
+  seattle_mariners:
+    "https://loodibee.com/wp-content/uploads/mlb-seattle-mariners-logo.png",
+  "st._louis_cardinals":
+    "https://loodibee.com/wp-content/uploads/mlb-st.-louis-cardinals-logo.png",
+  tampa_bay_rays:
+    "https://loodibee.com/wp-content/uploads/mlb-tampa-bay-rays-logo.png",
+  texas_rangers:
+    "https://loodibee.com/wp-content/uploads/mlb-texas-rangers-logo.png",
+  toronto_blue_jays:
+    "https://loodibee.com/wp-content/uploads/mlb-toronto-blue-jays-logo.png",
+  washington_nationals:
+    "https://loodibee.com/wp-content/uploads/mlb-washington-nationals-logo.png",
 };

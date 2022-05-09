@@ -56,6 +56,8 @@ function App() {
             setOdds({ ...odds, americanfootball_nfl: response.data });
           } else if (activeSport === "icehockey_nhl") {
             setOdds({ ...odds, icehockey_nhl: response.data });
+          } else if (activeSport === "baseball_mlb") {
+            setOdds({ ...odds, baseball_mlb: response.data });
           }
         }
       } catch (error) {
@@ -76,6 +78,7 @@ function App() {
     setModalShow(true);
   };
 
+  // code below helped me filter down nested map() loops
   // const detailsTeam1 = odds[activeSport]?.map((allOdds) =>
   //     allOdds.bookmakers[0].markets.map((game) =>  { name : game.outcomes[0].name, price : game.outcomes[0].price ))
   //   )
