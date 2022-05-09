@@ -30,8 +30,10 @@ const OddsModal = ({ onHide, show, activeGame, onSeeMoreOdds }) => {
           return (
             <Modal.Title key={idx} id="contained-modal-title-vcenter">
               {game.outcomes?.map((outcome, idx) => {
+                console.log("OUTCOME :::", outcome);
                 return (
                   <React.Fragment key={idx}>
+                    {console.log("OUTCOME :::", outcome)}
                     {/* {idx === 0 ||
                       (idx === 1 && (
                         <>
@@ -43,25 +45,27 @@ const OddsModal = ({ onHide, show, activeGame, onSeeMoreOdds }) => {
                           {outcome.name} Vs{" "}
                         </>
                       ))} */}
-                    {idx === 0 ? (
+                    {/* code below is so that in modal title draw doesn't appear */}
+                    {outcome.name != "Draw" && (
                       <>
                         <Image
                           className="odds-modal__image"
                           src={icons[filterTeam(outcome.name)]}
                           rounded
                         />{" "}
-                        {outcome.name} Vs
+                        {outcome.name}{" "}
                       </>
-                    ) : (
-                      <>
-                        {"    "}
-                        <Image
-                          className="odds-modal__image"
-                          src={icons[filterTeam(outcome.name)]}
-                          rounded
-                        />{" "}
-                        {outcome.name}
-                      </>
+
+                      // ) : (
+                      //   <>
+                      //     {"    "}
+                      //     <Image
+                      //       className="odds-modal__image"
+                      //       src={icons[filterTeam(outcome.name)]}
+                      //       rounded
+                      //     />{" "}
+                      //     {outcome.name}
+                      //   </>
                     )}
                   </React.Fragment>
                 );

@@ -60,6 +60,10 @@ const SportsGame = ({ sportsGame, onSeeMoreOdds }) => {
                     );
                   })}{" "}
                   <Card.Text>
+                    <React.Fragment>
+                      Powered By <strong>{sportsGame.bookmakers[0].key}</strong>
+                    </React.Fragment>
+
                     <Button
                       className="sports-card__see-more-odds"
                       variant="link"

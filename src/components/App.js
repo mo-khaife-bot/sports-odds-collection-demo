@@ -54,6 +54,8 @@ function App() {
             setOdds({ ...odds, basketball_nba: response.data });
           } else if (activeSport === "americanfootball_nfl") {
             setOdds({ ...odds, americanfootball_nfl: response.data });
+          } else if (activeSport === "icehockey_nhl") {
+            setOdds({ ...odds, icehockey_nhl: response.data });
           }
         }
       } catch (error) {

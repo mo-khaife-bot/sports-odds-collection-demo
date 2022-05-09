@@ -2,6 +2,7 @@ export const sportsList = [
   { key: "soccer_epl", view: "Premier League" },
   { key: "basketball_nba", view: "NBA" },
   { key: "americanfootball_nfl", view: "NFL" },
+  { key: "icehockey_nhl", view: "NHL" },
 ];
 
 // export const icons = {
