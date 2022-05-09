@@ -9,55 +9,9 @@ import { icons } from "./Constant";
 import { filterTeam, calculateOdds } from "../utils/utils";
 
 const OddsModal = ({ onHide, show, activeGame, onSeeMoreOdds }) => {
-  // const [team1Details, setTeam1Details] = useState({
-  //   name: "",
-  //   price: "",
-  // });
-  // const [team2Details, setTeam2Details] = useState({
-  //   name: "",
-  //   price: "",
-  // });
-  // const [drawDetails, setDrawDetails] = useState({
-  //   name: "",
-  //   price: "",
-  // });
-  // console.log(activeGame.bookmakers);
-  // useEffect(() => {
-  //   const gameDetails = () => {
-  //     activeGame.bookmakers?.map((site) => {
-  //       site.markets?.map((game) => {
-  //         game.outcomes?.map((outcome) => {
-  //           setTeam1Details({
-  //             name: outcome.name,
-  //             price: calculateOdds(outcome.price),
-  //           });
-  //           setTeam2Details({
-  //             name: outcome.name,
-  //             price: calculateOdds(outcome.price),
-  //           });
-  //           setDrawDetails({
-  //             name: outcome.name,
-  //             price: calculateOdds(outcome.price),
-  //           });
-  //           return team1Details, team2Details, drawDetails;
-  //         });
-  //       });
-  //     });
-  //   };
-  //   gameDetails();
-  // }, [activeGame]);
-
   if (!activeGame) {
     return null;
   }
-
-  // const team3 = activeGame.bookmakers[0]?.map((site) => {
-  //   site.markets?.map((game) => {
-  //     game.outcomes?.map((outcome) => {
-  //       return console.log(outcome.name);
-  //     });
-  //   });
-  // });
 
   return (
     <Modal
@@ -76,6 +30,17 @@ const OddsModal = ({ onHide, show, activeGame, onSeeMoreOdds }) => {
               {game.outcomes?.map((outcome, idx) => {
                 return (
                   <React.Fragment key={idx}>
+                    {/* {idx === 0 ||
+                      (idx === 1 && (
+                        <>
+                          <Image
+                            className="odds-modal__image"
+                            src={icons[filterTeam(outcome.name)]}
+                            rounded
+                          />{" "}
+                          {outcome.name} Vs{" "}
+                        </>
+                      ))} */}
                     {idx === 0 ? (
                       <>
                         <Image

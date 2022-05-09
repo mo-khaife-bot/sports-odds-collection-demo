@@ -13,19 +13,6 @@ import "../style/SportsCard.scss";
 import { icons } from "./Constant";
 
 const SportsGame = ({ sportsGame, onSeeMoreOdds }) => {
-  const [homeDetails, setHomeDetails] = useState({
-    name: "",
-    price: "",
-  });
-  const [awayDetails, setAwayDetails] = useState({
-    name: "",
-    price: "",
-  });
-  const [drawDetails, setDrawDetails] = useState({
-    name: "",
-    price: "",
-  });
-
   return (
     <Card className="sports-card">
       <Card.Body>
@@ -40,7 +27,7 @@ const SportsGame = ({ sportsGame, onSeeMoreOdds }) => {
                 <Card.Body key={key}>
                   {game.outcomes?.map((thing, key) => {
                     return (
-                      // chained ternary operator allows to identify home/ away team based in index of value via map func
+                      // chained ternary operator allows to identify 2 teams and draw
                       <Card.Text key={key}>
                         {key === 0 ? (
                           <>

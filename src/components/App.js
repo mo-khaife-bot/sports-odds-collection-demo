@@ -20,25 +20,11 @@ function App() {
   const [activeSport, setActiveSport] = useState("soccer_epl");
   const [activeGame, setActiveGame] = useState(null);
   const [modalShow, setModalShow] = useState(false);
-  const [loading, setLoading] = useState(false);
-
-  // const [team1Details, setTeam1Details] = useState({
-  //   name: "",
-  //   price: "",
-  // });
-  // const [team2Details, setTeam2Details] = useState({
-  //   name: "",
-  //   price: "",
-  // });
-  // const [drawDetails, setDrawDetails] = useState({
-  //   name: "",
-  //   price: "",
-  // });
+  const [rateLimit, setRateLimit] = useState(false);
 
   useEffect(() => {
     const getData = async (key) => {
       try {
-        setLoading(true);
         const response = await axios({
           method: "GET",
           url: `https://odds.p.rapidapi.com/v4/sports/${key}/odds`,
@@ -57,10 +43,10 @@ function App() {
           throw new Error(
             `Expected status 200 ok status got: ${response.status}`
           );
+          // error handling to check if rate limit reached
+        } else if (response.status === 429) {
+          setRateLimit(true);
         } else {
-          // ? I would set state of names here but as I have to loop in nested map() this would be very difficult
-          setLoading(true);
-
           return setOdds({ ...odds, soccer_epl: response.data });
         }
       } catch (error) {
@@ -71,41 +57,6 @@ function App() {
     getData(activeSport);
   }, []);
 
-  // useEffect(() => {
-  //   const gameDetails = async (response) => {
-  //     response[activeSport] &&
-  //       response[activeSport].map((sportsGame) =>
-  //         sportsGame.bookmakers.markets?.map((game) =>
-  //           game.outcomes?.map((thing) =>
-  //             key === 0
-  //               ? setTeam1Details((oldState) => ({
-  //                   ...oldState,
-  //                   name: thing.name,
-  //                   price: calculateOdds(thing.price),
-  //                 }))
-  //               : key === 1
-  //               ? setTeam2Details((oldState) => ({
-  //                   ...oldState,
-  //                   name: thing.name,
-  //                   price: calculateOdds(thing.price),
-  //                 }))
-  //               : setDrawDetails((oldState) => ({
-  //                   ...oldState,
-  //                   name: thing.name,
-  //                   price: calculateOdds(thing.price),
-  //                 }))
-  //           )
-  //         )
-  //       );
-  //   };
-  //   gameDetails(odds);
-  // }, [odds]);
-
-  // console.log("odds + bookmakers::: ", odds);
-  // console.log("home: ", team1Details);
-  // console.log("away: ", team2Details);
-  // console.log("draw: ", drawDetails);
-
   if (!odds) {
     return null;
   }
@@ -114,6 +65,18 @@ function App() {
     setActiveGame(game);
     setModalShow(true);
   };
+
+  // const detailsTeam1 = odds[activeSport]?.map((allOdds) =>
+  //     allOdds.bookmakers[0].markets.map((game) =>  { name : game.outcomes[0].name, price : game.outcomes[0].price ))
+  //   )
+
+  // const nameTeam2 = odds[activeSport]?.map((allOdds) =>
+  //   allOdds.bookmakers[0].markets.map((game) => game.outcomes[1].name)
+  // );
+
+  // console.log("Team 1:: ", detailsTeam1);
+
+  // console.log("odds :::", odds);
 
   return (
     <>
@@ -145,8 +108,11 @@ function App() {
               })}
             </ListGroup>
           </Col>{" "}
-          {!loading ? (
-            <h5>Sports Odd API is Loading.....</h5>
+          {rateLimit ? (
+            <h5>
+              Rate Limit for Sports Odd API has been reached please check back
+              after the 5th of next month to refresh.
+            </h5>
           ) : (
             <Col xs={12} md={10}>
               {error ? (
