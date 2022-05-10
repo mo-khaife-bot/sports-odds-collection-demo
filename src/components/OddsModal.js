@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import Modal from "react-bootstrap/Modal";
-import Button from "react-bootstrap/Button";
+
 import Table from "react-bootstrap/Table";
 import Image from "react-bootstrap/Image";
 import { icons } from "./Constant";
@@ -10,7 +10,7 @@ import { filterTeam, calculateOdds } from "../utils/utils";
 
 import "../style/OddsModal.scss";
 
-const OddsModal = ({ onHide, show, activeGame, onSeeMoreOdds }) => {
+const OddsModal = ({ onHide, show, activeGame }) => {
   if (!activeGame) {
     return null;
   }
@@ -33,7 +33,7 @@ const OddsModal = ({ onHide, show, activeGame, onSeeMoreOdds }) => {
                 console.log("OUTCOME :::", outcome);
                 return (
                   <React.Fragment key={idx}>
-                    {/* code below is so that in modal title draw doesn't appear only important in sports where draw is possible like soccer */}
+                    {/* Conditional rendering below is so that in modal title draw doesn't appear only important in sports where draw is possible like soccer */}
                     {outcome.name != "Draw" && (
                       <>
                         <Image
