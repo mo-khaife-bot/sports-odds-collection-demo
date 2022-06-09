@@ -219,7 +219,8 @@ export const icons = {
     "https://loodibee.com/wp-content/uploads/nhl-pittsburgh-penguins-logo.png",
   san_jose_sharks:
     "https://loodibee.com/wp-content/uploads/nhl-san-jose-sharks-logo.png",
-  st_louis_blues:
+  // error handling some names have a dot manually but make obj key into strg or wont accept dot just leave it there and get rid of dot when link to png is returned
+  "st._louis_blues":
     "https://loodibee.com/wp-content/uploads/nhl-st-louis-blues-logo.png",
   tampa_bay_lightning:
     "https://loodibee.com/wp-content/uploads/nhl-tampa-bay-lightning-logo.png",
@@ -286,8 +287,9 @@ export const icons = {
     "https://loodibee.com/wp-content/uploads/mlb-san-francisco-giants-logo.png",
   seattle_mariners:
     "https://loodibee.com/wp-content/uploads/mlb-seattle-mariners-logo.png",
+  // error handling some names have a dot manually but make obj key into strg or wont accept dot just leave it there and get rid of dot when link to png is returned
   "st._louis_cardinals":
-    "https://loodibee.com/wp-content/uploads/mlb-st.-louis-cardinals-logo.png",
+    "https://loodibee.com/wp-content/uploads/mlb-st-louis-cardinals-logo.png",
   tampa_bay_rays:
     "https://loodibee.com/wp-content/uploads/mlb-tampa-bay-rays-logo.png",
   texas_rangers:
